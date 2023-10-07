@@ -9,7 +9,7 @@ type StoreItemProps = {
 }
 export const StoreItem = ({id, name, imgUrl, price}: StoreItemProps) => {
 
-    const quantity = 0;
+    const quantity:number = 1;
   return (
     <Card className="h-100">
         <Card.Img src={imgUrl}
@@ -25,11 +25,23 @@ export const StoreItem = ({id, name, imgUrl, price}: StoreItemProps) => {
             </Card.Title>
             <div className="mt-auto">
                 {
-                    quantity === 0 ?(
+                    quantity == 0 ?(
                         <Button className="w-100">
                             + Add to cart
                         </Button> 
-                    ): null
+                    ): <div className="d-flex justify-content-center flex-column align-items-center" style={{gap: '.5rem'}}>
+                            <div className="d-flex justify-content-between align-items-center" style={{gap: '.5rem'}}>
+                                <Button>-</Button>
+                                    <div>
+                                        <span className="fs-3">{quantity}</span>
+                                        in cart
+                                    </div>
+                                <Button>+</Button>
+                            </div>
+                            <Button variant="danger" className="bg-danger">
+                                remove
+                            </Button>
+                    </div>
                 }
             </div>
         </Card.Body>
