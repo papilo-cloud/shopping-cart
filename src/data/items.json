@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "book",
+        "price": 10.99,
+        "imgUrl": "/assets/image/images1.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "hotel",
+        "price": 3999.99,
+        "imgUrl": "/assets/image/images2.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "room",
+        "price": 1400.00,
+        "imgUrl": "/assets/image/images3.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "computer",
+        "price": 1417.29,
+        "imgUrl": "/assets/image/images4.jpeg"
+    }
+]
