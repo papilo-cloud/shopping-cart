@@ -21,7 +21,7 @@ export function ShoppingCartProvider({children}:{children: ReactNode}) {
     const [cartItem, setCartItem] = useState<CartItem[]>([])
 
     function getItemQuantity(id:number) {
-        return cartItem.find(item => item.id === id)?.quantity || 0
+        return cartItem.find(item => item.id === id)?.quantity || 2
     }
     function increaseQuantity(id:number) {
         setCartItem(currentItem => {
