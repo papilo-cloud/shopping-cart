@@ -1,5 +1,4 @@
 import { ReactNode, createContext, useContext, useState } from "react";
-import item from '../data/items.json'
 import { ShoppingCart } from "../components/ShoppingCart";
 type ShoppingCartContext = {
     openCart: () => void
@@ -25,19 +24,18 @@ export function UseShoppingCart() {
 
 export function ShoppingCartProvider({children}:{children: ReactNode}) {
     const [isOpen, setIsOpen] = useState(false)
-    const [cartItem, setCartItem] = useState<CartItem[]>(item)
+    const [cartItem, setCartItem] = useState<CartItem[]>([])
 
     const cartQuantity = cartItem.reduce((a, b) => b.quantity + a, 0)
 
-    console.log(cartQuantity)
     const openCart = () => setIsOpen(true)
     const closeCart = () => setIsOpen(false)
     function getItemQuantity(id:number) {
-        return cartItem.find(item => item.id === id)?.quantity || 0
+        return cartItem.find(item => item.id == id)?.quantity || 0
     }
     function increaseQuantity(id:number) {
         setCartItem(currentItem => {
-            if (currentItem.find(item => item.id === id) === null) {
+            if (currentItem.find(item => item.id === id) == null) {
                 return [...currentItem, {id, quantity: 1}]
             } else {
                 return currentItem.map(item => {
@@ -81,6 +79,6 @@ export function ShoppingCartProvider({children}:{children: ReactNode}) {
         closeCart
     }}>
         {children}
-        <ShoppingCart />
+        <ShoppingCart isOpen={isOpen} />
     </ShoppingCartContext.Provider>
 }
