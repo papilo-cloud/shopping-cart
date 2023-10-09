@@ -3,7 +3,6 @@ import storeItems from '../data/items.json';
 import { StoreItem } from '../components/StoreItem';
 
 export const Store = () => {
-  console.log(storeItems)
   return (
     <>
     <h1>Store</h1>

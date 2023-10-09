@@ -3,24 +3,28 @@
         "id": 1,
         "name": "book",
         "price": 10.99,
-        "imgUrl": "/assets/image/images1.jpeg"
+        "imgUrl": "/assets/image/images1.jpeg",
+        "quantity": 0
     },
     {
         "id": 2,
         "name": "hotel",
         "price": 3999.99,
-        "imgUrl": "/assets/image/images2.jpeg"
+        "imgUrl": "/assets/image/images2.jpeg",
+        "quantity": 0
     },
     {
         "id": 3,
         "name": "room",
         "price": 1400.00,
-        "imgUrl": "/assets/image/images3.jpeg"
+        "imgUrl": "/assets/image/images3.jpeg",
+        "quantity": 0
     },
     {
         "id": 4,
         "name": "computer",
         "price": 1417.29,
-        "imgUrl": "/assets/image/images4.jpeg"
+        "imgUrl": "/assets/image/images4.jpeg",
+        "quantity": 0
     }
 ]
